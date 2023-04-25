@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, useScroll, MotionProps } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Avatar() {
   const [currentAvatar, setCurrentAvatar] = useState(0);
