@@ -1,0 +1,29 @@
+footer {
+  padding: 2rem;
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.beating-heart {
+  animation: beating-heart 1s infinite;
+  display: inline-block;
+  @keyframes beating-heart {
+    0% {
+      transform: scale(1);
+      filter: brightness(0.8);
+    }
+    50% {
+      transform: scale(1.4);
+      filter: brightness(1.5);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(0.8);
+    }
+  }
+}

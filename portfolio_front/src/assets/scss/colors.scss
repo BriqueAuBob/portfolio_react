@@ -1,0 +1,29 @@
+@each $colorName, $v in $colors {
+  @each $shade, $value in map-get($colors, $colorName) {
+    .#{"bg-" + $colorName + "-" + $shade} {
+      background: $value;
+
+      &.bg-hover {
+        &:hover {
+          background: lighten($value, 5%);
+        }
+      }
+    }
+
+    .#{"text-" + $colorName + "-" + $shade} {
+      color: $value;
+    }
+
+    .#{"border-" + $colorName + "-" + $shade} {
+      border-color: $value;
+    }
+  }
+
+  .bg-white {
+    background: $white;
+  }
+
+  .text-white {
+    color: $white;
+  }
+}

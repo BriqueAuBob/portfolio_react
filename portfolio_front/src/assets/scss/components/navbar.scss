@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  font-size: 1.5rem;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 16px;
+    position: relative;
+
+    li {
+      a {
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        border-radius: 24px;
+        padding: 8px 16px;
+        // background: rgba(255, 255, 255, 0.5);
+        &:hover,
+        &.active {
+          background: white;
+          color: black;
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    top: -72px;
+    opacity: 0;
+    font-size: 0;
+  }
+}

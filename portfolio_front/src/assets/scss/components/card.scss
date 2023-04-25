@@ -1,0 +1,149 @@
+.card {
+  border-radius: 48px;
+  position: relative;
+  background: white;
+  transition: $bounce 0.5s;
+  border: 1px solid rgba(104, 104, 104, 0.089);
+  overflow: hidden;
+
+  & > .image {
+    width: 100%;
+    position: relative;
+    cursor: default;
+
+    & > img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    height: 100%;
+    transition: ease-in 0.2s;
+
+    & > h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    & > p {
+      margin-top: 8px;
+    }
+
+    & > .link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      color: $primary-400;
+      transition: $bounce 0.25s;
+    }
+
+    &:hover {
+      .link {
+        text-decoration: dotted underline;
+        color: $primary-300;
+      }
+    }
+  }
+
+  .icon {
+    background: white;
+    padding: 0.5rem;
+    border-radius: 150px;
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    transition: ease-in-out 0.4s;
+    overflow: hidden;
+    gap: 18px;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      transition: $bounce 0.25s;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      gap: 4px;
+      width: 12rem;
+      padding: 0.5rem 0.5rem 0.5rem 1rem;
+
+      img {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+.card_link {
+  --hoverColor: $gray-900;
+  gap: 8px;
+  margin-top: 16px;
+  color: $gray-900;
+  transition: $bounce 0.25s;
+  border: 1px solid $gray-100;
+  padding: 24px 48px;
+  border-radius: 120px;
+  font-weight: 700;
+  font-size: 48px;
+  position: relative;
+  overflow: hidden;
+  transition: $bounce 1s;
+  text-align: center;
+  background: white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+    background: var(--hoverColor);
+    z-index: -1;
+    transition: $bounce 2s;
+    border-radius: 120px;
+  }
+
+  &:hover {
+    color: white;
+    border-color: var(--hoverColor);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.089);
+    transform: scale(1.05) translateY(-4px);
+    &:before {
+      transform: translateX(-50%) scale(7);
+      top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .card_link {
+    font-size: 24px;
+    padding: 24px 8px;
+  }
+}

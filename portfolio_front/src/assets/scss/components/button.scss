@@ -1,0 +1,72 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 150px;
+  cursor: pointer;
+  background: $white;
+  border: 1px solid #5e5e5e30;
+  width: fit-content;
+  font-weight: 600;
+  position: relative;
+  transition: $bounce 1s;
+  overflow: hidden;
+  color: black;
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.small {
+    padding: 0.5rem 1rem;
+    &:before {
+      background: $gray-900;
+    }
+  }
+
+  &.big {
+    padding: 1.5rem 3rem;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: -1;
+    background: $primary-500;
+    transition: $bounce 1s;
+  }
+
+  &.custom {
+    &:before {
+      background: var(--color);
+    }
+  }
+
+  &:hover {
+    border-color: $gray-700;
+    transform: scale(1.1) translateY(-4px) !important;
+    color: white;
+    &:before {
+      transform: translateX(-50%) translateY(100%) scale(4);
+    }
+  }
+}
+
+.btn-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  &.center {
+    justify-content: center;
+  }
+}
