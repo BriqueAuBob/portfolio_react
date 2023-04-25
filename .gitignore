@@ -7,9 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-portfolio_front/node_modules
-portfolio_front/dist
-portfolio_front/dist-ssr
+front/node_modules
+front/dist
+front/dist-ssr
 *.local
 
 # Editor directories and files
@@ -23,5 +23,5 @@ portfolio_front/dist-ssr
 *.sln
 *.sw?
 
-portfolio_api/node_modules
-portfolio_api/.env
+api/node_modules
+api/.env
