@@ -64,7 +64,7 @@ function Index() {
       }
 
       const { status } = await fetch(
-        "http://portfolio.api.bclement.fr/mailer",
+        "https://portfolio.api.bclement.fr/mailer",
         {
           method: "POST",
           headers: {
