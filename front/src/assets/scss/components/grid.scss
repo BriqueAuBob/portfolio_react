@@ -19,7 +19,16 @@
     justify-content: center;
   }
 
+  @media (max-width: 430px) {
+    &.cols-3 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
+    &.cols-6,
+    &.cols-auto {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
